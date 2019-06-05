@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
 
   s.name         = 'MediatorModule'
   # s.version      = '_RepositoryVersion_'
-s.version      = '0.0.2'
+s.version      = '0.0.3'
   s.summary      = 'MediatorModule'
 
   s.description  = <<-DESC
@@ -38,7 +38,7 @@ s.version      = '0.0.2'
   # s.public_header_files = 'MediatorModule/Classes/ModuleManager/**/*.h'
   # s.public_header_files = 'MediatorModule/**/*.h'
   # 私有头文件
-  s.private_header_files = 'MediatorModule/Classes/**/*.h'
+  # s.private_header_files = 'MediatorModule/Classes/**/*.h'
   # 预编译文件
   s.prefix_header_contents = '#import <UIKit/UIKit.h>', '#import <Foundation/Foundation.h>', '#import "MediatorModuleHeader.h"'
   # s.prefix_header_file = 'iphone/include/prefix.pch'
