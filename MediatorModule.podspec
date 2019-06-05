@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
 
   s.name         = 'MediatorModule'
   # s.version      = '_RepositoryVersion_'
-s.version      = '0.0.1'
+s.version      = '0.0.2'
   s.summary      = 'MediatorModule'
 
   s.description  = <<-DESC
@@ -30,7 +30,7 @@ s.version      = '0.0.1'
   # s :path => '/Documents/PrettyKit/PrettyKit.podspec'
 
   # 文件路径
-  s.source_files  = 'MediatorModule/Classes/**/*'
+  # s.source_files  = 'MediatorModule/Classes/**/*'
   # s.source_files  = 'MediatorModule/**/*.{h,m,mm,swift}'
   # s.source_files = 'Classes/**/*.{h,m}', 'More_Classes/**/*.{h,m}'
 
