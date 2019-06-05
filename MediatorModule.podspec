@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
 
   s.name         = 'MediatorModule'
   # s.version      = '_RepositoryVersion_'
-s.version      = '0.0.3'
+s.version      = '0.0.4'
   s.summary      = 'MediatorModule'
 
   s.description  = <<-DESC
@@ -119,16 +119,9 @@ s.version      = '0.0.3'
        ss.dependency 'MediatorModule/Header'
   end
   
-  s.subspec 'FirstModule' do |ss|
-      ss.source_files = 'MediatorModule/Classes/FirstModule/**/*'
-      ss.public_header_files = 'MediatorModule/Classes/FirstModule/**/*.h'
-
-      ss.dependency 'MediatorModule/Mediator'
-  end
-
-  s.subspec 'SecondModule' do |ss|
-      ss.source_files = 'MediatorModule/Classes/SecondModule/**/*'
-      ss.public_header_files = 'MediatorModule/Classes/SecondModule/**/*.h'
+  s.subspec 'Protocol' do |ss|
+      ss.source_files = 'MediatorModule/Classes/Protocol/**/*'
+      ss.public_header_files = 'MediatorModule/Classes/Protocol/**/*.h'
 
       ss.dependency 'MediatorModule/Mediator'
   end
