@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
 
   s.name         = 'MediatorModule'
   # s.version      = '_RepositoryVersion_'
-s.version      = '0.0.4'
+s.version      = '0.0.5'
   s.summary      = 'MediatorModule'
 
   s.description  = <<-DESC
@@ -89,11 +89,11 @@ s.version      = '0.0.4'
   #     ss.dependency 'BSSBaseDependTool/BSSConfiguration'
   # end
 
-  s.subspec 'Header' do |ss|
-      ss.source_files = 'MediatorModule/Classes/Header/**/*'
-      # ss.public_header_files = 'MediatorModule/Classes/Header/*.h'
-      ss.private_header_files = 'MediatorModule/Classes/Header/*.h'
-  end
+  # s.subspec 'Header' do |ss|
+  #     ss.source_files = 'MediatorModule/Classes/Header/**/*'
+  #     # ss.public_header_files = 'MediatorModule/Classes/Header/*.h'
+  #     ss.private_header_files = 'MediatorModule/Classes/Header/*.h'
+  # end
 
   # s.subspec 'Classes' do |ss|
   #     ss.source_files = 'MediatorModule/Classes/**/*'
@@ -111,20 +111,43 @@ s.version      = '0.0.4'
   #     ss.dependency 'MediatorModule/Classes'
   # end
 
-  
-  s.subspec 'Mediator' do |ss|
-      ss.source_files = 'MediatorModule/Classes/Mediator/**/*'
-      ss.public_header_files = 'MediatorModule/Classes/Mediator/**/*.h'
+  s.subspec 'Classes' do |ss|
+    
+      ss.subspec 'Header' do |sss|
+          sss.source_files = 'MediatorModule/Classes/Header/**/*'
+          sss.private_header_files = 'MediatorModule/Classes/Header/*.h'
+      end
 
-       ss.dependency 'MediatorModule/Header'
+      ss.subspec 'Mediator' do |sss|
+          sss.source_files = 'MediatorModule/Classes/Mediator/**/*'
+          sss.public_header_files = 'MediatorModule/Classes/Mediator/**/*.h'
+
+          sss.dependency 'MediatorModule/Classes/Header'
+      end
+
+      ss.subspec 'Protocol' do |sss|
+          sss.source_files = 'MediatorModule/Classes/Protocol/**/*'
+          sss.public_header_files = 'MediatorModule/Classes/Protocol/**/*.h'
+      end
+
+      # ss.source_files = 'MediatorModule/Classes/**/*'
+      # ss.exclude_files = 'MediatorModule/Classes/Header/**/*', 'MediatorModule/Classes/Mediator/**/*', 'MediatorModule/Classes/Protocol/**/*'
+      # ss.private_header_files = 'MediatorModule/Classes/**/*.h'
   end
   
-  s.subspec 'Protocol' do |ss|
-      ss.source_files = 'MediatorModule/Classes/Protocol/**/*'
-      ss.public_header_files = 'MediatorModule/Classes/Protocol/**/*.h'
+  # s.subspec 'Mediator' do |ss|
+  #     ss.source_files = 'MediatorModule/Classes/Mediator/**/*'
+  #     ss.public_header_files = 'MediatorModule/Classes/Mediator/**/*.h'
 
-      ss.dependency 'MediatorModule/Mediator'
-  end
+  #      ss.dependency 'MediatorModule/Header'
+  # end
+  
+  # s.subspec 'Protocol' do |ss|
+  #     ss.source_files = 'MediatorModule/Classes/Protocol/**/*'
+  #     ss.public_header_files = 'MediatorModule/Classes/Protocol/**/*.h'
+
+  #     ss.dependency 'MediatorModule/Mediator'
+  # end
 
   # s.subspec 'Crash' do |ss|
   #     ss.source_files = 'DFBasePlug/DFBasePlug/Classes/Crash/*'
