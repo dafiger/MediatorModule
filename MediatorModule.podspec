@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
 
   s.name         = 'MediatorModule'
   # s.version      = '_RepositoryVersion_'
-s.version      = '0.0.5'
+s.version      = '0.0.6'
   s.summary      = 'MediatorModule'
 
   s.description  = <<-DESC
@@ -128,6 +128,9 @@ s.version      = '0.0.5'
       ss.subspec 'Protocol' do |sss|
           sss.source_files = 'MediatorModule/Classes/Protocol/**/*'
           sss.public_header_files = 'MediatorModule/Classes/Protocol/**/*.h'
+
+          sss.dependency 'MediatorModule/Classes/Header'
+          sss.dependency 'MediatorModule/Classes/Mediator'
       end
 
       # ss.source_files = 'MediatorModule/Classes/**/*'
