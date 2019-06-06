@@ -120,14 +120,14 @@ s.version      = '0.0.6'
 
       ss.subspec 'Mediator' do |sss|
           sss.source_files = 'MediatorModule/Classes/Mediator/**/*'
-          sss.public_header_files = 'MediatorModule/Classes/Mediator/**/*.h'
+          sss.public_header_files = 'MediatorModule/Classes/Mediator/*.h'
 
           sss.dependency 'MediatorModule/Classes/Header'
       end
 
       ss.subspec 'Protocol' do |sss|
           sss.source_files = 'MediatorModule/Classes/Protocol/**/*'
-          sss.public_header_files = 'MediatorModule/Classes/Protocol/**/*.h'
+          sss.public_header_files = 'MediatorModule/Classes/Protocol/*.h'
 
           sss.dependency 'MediatorModule/Classes/Header'
           sss.dependency 'MediatorModule/Classes/Mediator'
