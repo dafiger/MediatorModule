@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
 
   s.name         = 'MediatorModule'
   # s.version      = '_RepositoryVersion_'
-s.version      = '0.1.0'
+s.version      = '0.1.1'
   s.summary      = 'MediatorModule'
 
   s.description  = <<-DESC
@@ -97,8 +97,8 @@ s.version      = '0.1.0'
 
   s.subspec 'Classes' do |ss|
       ss.source_files = 'MediatorModule/Classes/**/*'
-      # ss.public_header_files = 'MediatorModule/Classes/**/*.h'
-      ss.private_header_files = 'MediatorModule/Classes/**/*.h'
+      ss.public_header_files = 'MediatorModule/Classes/**/*.h'
+      # ss.private_header_files = 'MediatorModule/Classes/**/*.h'
 
       ss.exclude_files = 'MediatorModule/Classes/Header/**/*', 'MediatorModule/Classes/ModuleManager/**/*'
   end
